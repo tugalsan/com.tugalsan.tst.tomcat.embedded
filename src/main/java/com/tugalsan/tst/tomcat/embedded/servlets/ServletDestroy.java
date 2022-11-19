@@ -1,7 +1,6 @@
 package com.tugalsan.tst.tomcat.embedded.servlets;
 
 import com.tugalsan.api.unsafe.client.TGS_UnSafe;
-import com.tugalsan.tst.tomcat.embedded.TS_Tomcat;
 import com.tugalsan.tst.tomcat.embedded.utils.TS_TomcatBall;
 import java.io.*;
 import jakarta.servlet.*;
@@ -22,7 +21,7 @@ public class ServletDestroy extends HttpServlet {
             if (tomcatBall != null) {
                 tomcatBall.destroy();
             }
-            System.exit(0);
+//            System.exit(0);
         });
     }
 }

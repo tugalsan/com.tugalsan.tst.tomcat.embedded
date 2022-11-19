@@ -5,6 +5,7 @@ import com.tugalsan.tst.tomcat.embedded.utils.TS_TomcatConnector;
 
 public class Main {
 
+    //HOW TO EXECUTE
     //C:\me\codes\com.tugalsan\tst\com.tugalsan.tst.tomcat.embedded>target\bin\webapp.bat
     public static void main(String[] args) {
         var tomcatBall = TS_Tomcat.of(

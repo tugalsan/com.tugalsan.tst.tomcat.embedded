@@ -25,9 +25,9 @@ public record TS_TomcatBall(
                 connector.destroy();
             }, e -> TGS_StreamUtils.doNothing());
         });
-//        TGS_UnSafe.execute(() -> {
-//            context().destroy();
-//        }, e -> TGS_StreamUtils.doNothing());
+        TGS_UnSafe.execute(() -> {
+            context().destroy();
+        }, e -> TGS_StreamUtils.doNothing());
     }
 
 }
