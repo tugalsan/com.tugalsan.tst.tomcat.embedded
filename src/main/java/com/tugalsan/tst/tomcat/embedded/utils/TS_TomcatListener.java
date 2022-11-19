@@ -1,8 +1,7 @@
 package com.tugalsan.tst.tomcat.embedded.utils;
 
-import jakarta.servlet.ServletContextEvent;
-import jakarta.servlet.ServletContextListener;
-import jakarta.servlet.annotation.WebListener;
+import jakarta.servlet.*;
+import jakarta.servlet.annotation.*;
 
 @WebListener
 public class TS_TomcatListener implements ServletContextListener {

@@ -1,7 +1,7 @@
 package com.tugalsan.tst.tomcat.embedded;
 
-import com.tugalsan.tst.tomcat.embedded.servlets.ServletByMapping;
-import com.tugalsan.tst.tomcat.embedded.utils.TS_TomcatConnector;
+import com.tugalsan.tst.tomcat.embedded.servlets.*;
+import com.tugalsan.tst.tomcat.embedded.utils.*;
 
 public class Main {
 
