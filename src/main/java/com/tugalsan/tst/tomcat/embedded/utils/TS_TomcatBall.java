@@ -20,11 +20,7 @@ public record TS_TomcatBall(
         List<TS_TomcatConnector> connectors) {
 
     public void destroy() {
-        connectors().forEach(connector -> {
-            TGS_UnSafe.execute(() -> {
-                connector.destroy();
-            }, e -> TGS_StreamUtils.doNothing());
-        });
+        connectors().forEach(connector -> connector.destroy());
         TGS_UnSafe.execute(() -> {
             context().destroy();
         }, e -> TGS_StreamUtils.doNothing());
