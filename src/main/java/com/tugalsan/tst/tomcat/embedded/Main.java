@@ -18,6 +18,6 @@ public class Main {
 //                    connectors.add(TS_TomcatConnector.ofUnSecure(8088));
                 }
         );
-        System.out.println(tomcatBall);
+        System.out.println("SAFE EXIT: " + tomcatBall);
     }
 }
