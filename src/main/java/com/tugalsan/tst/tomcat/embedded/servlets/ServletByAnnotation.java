@@ -10,8 +10,8 @@ import com.tugalsan.tst.tomcat.embedded.utils.*;
 import java.time.Duration;
 
 @WebServlet(
-        name = "ServletDestroy",//JUST A UNQUE TAG
-        urlPatterns = {"/ServletDestroy"}
+        name = "ServletByAnnotation",//JUST A UNQUE TAG
+        urlPatterns = {"/ServletByAnnotation"}
 )
 public class ServletByAnnotation extends HttpServlet {
 
