@@ -5,7 +5,6 @@ import java.io.*;
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.*;
 import jakarta.servlet.http.*;
-import com.tugalsan.api.unsafe.client.*;
 import com.tugalsan.tst.tomcat.embedded.utils.*;
 import java.time.Duration;
 
@@ -20,12 +19,11 @@ public class ServletDestroy extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        TGS_UnSafe.execute(() -> {
-             if (tomcatBall != null) {
-                tomcatBall.destroy();
-            }
-            TS_ThreadWait.of(Duration.ofSeconds(5));
-            System.exit(0);
-        });
+        var waitSeconds = 5;
+        if (tomcatBall != null) {
+            tomcatBall.destroy(waitSeconds,waitSeconds);
+        }
+        TS_ThreadWait.of(Duration.ofSeconds(waitSeconds));//TEST FOR SEQUENCIAL WAY
+        System.exit(0);
     }
 }
