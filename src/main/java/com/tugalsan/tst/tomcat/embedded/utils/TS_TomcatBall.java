@@ -21,7 +21,7 @@ public record TS_TomcatBall(
 
     public void destroy() {
         connectors().forEach(connector -> connector.destroy());
-        TGS_UnSafe.execute(() -> context().destroy(), e -> TGS_StreamUtils.doNothing());
+        TGS_UnSafe.execute(() -> context().destroy());
     }
 
 }
