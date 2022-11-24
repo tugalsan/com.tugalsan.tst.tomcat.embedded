@@ -1,10 +1,9 @@
-C:\me\codes\com.tugalsan\tst\com.tugalsan.tst.tomcat.embedded\src\main\java\com\tugalsan\tst\tomcat\embedded\servlets\ServletDestroy.java
+C:\me\codes\com.tugalsan\tst\com.tugalsan.tst.tomcat.embedded\src\main\java\com\tugalsan\tst\tomcat\embedded\servlets\TS_ServletAlive.java
 C:\me\codes\com.tugalsan\tst\com.tugalsan.tst.tomcat.embedded\src\main\java\com\tugalsan\tst\tomcat\embedded\utils\TS_TomcatBuild.java
-C:\me\codes\com.tugalsan\tst\com.tugalsan.tst.tomcat.embedded\src\main\java\com\tugalsan\tst\tomcat\embedded\servlets\ServletByMapping.java
-C:\me\codes\com.tugalsan\tst\com.tugalsan.tst.tomcat.embedded\src\main\java\com\tugalsan\tst\tomcat\embedded\utils\TS_TomcatConnector.java
-C:\me\codes\com.tugalsan\tst\com.tugalsan.tst.tomcat.embedded\src\main\java\com\tugalsan\tst\tomcat\embedded\utils\TS_TomcatBall.java
 C:\me\codes\com.tugalsan\tst\com.tugalsan.tst.tomcat.embedded\src\main\java\com\tugalsan\tst\tomcat\embedded\Main.java
 C:\me\codes\com.tugalsan\tst\com.tugalsan.tst.tomcat.embedded\src\main\java\com\tugalsan\tst\tomcat\embedded\utils\TS_TomcatPath.java
-C:\me\codes\com.tugalsan\tst\com.tugalsan.tst.tomcat.embedded\src\main\java\com\tugalsan\tst\tomcat\embedded\TS_Tomcat.java
-C:\me\codes\com.tugalsan\tst\com.tugalsan.tst.tomcat.embedded\src\main\java\com\tugalsan\tst\tomcat\embedded\servlets\ServletAbstract.java
+C:\me\codes\com.tugalsan\tst\com.tugalsan.tst.tomcat.embedded\src\main\java\com\tugalsan\tst\tomcat\embedded\servlets\TS_ServletDestroy.java
+C:\me\codes\com.tugalsan\tst\com.tugalsan.tst.tomcat.embedded\src\main\java\com\tugalsan\tst\tomcat\embedded\TS_TomcatBall.java
+C:\me\codes\com.tugalsan\tst\com.tugalsan.tst.tomcat.embedded\src\main\java\com\tugalsan\tst\tomcat\embedded\TS_TomcatConnector.java
 C:\me\codes\com.tugalsan\tst\com.tugalsan.tst.tomcat.embedded\src\main\java\com\tugalsan\tst\tomcat\embedded\utils\TS_TomcatListener.java
+C:\me\codes\com.tugalsan\tst\com.tugalsan.tst.tomcat.embedded\src\main\java\com\tugalsan\tst\tomcat\embedded\TS_ServletAbstract.java

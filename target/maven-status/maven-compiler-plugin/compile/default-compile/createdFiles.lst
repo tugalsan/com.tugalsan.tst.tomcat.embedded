@@ -1,10 +1,9 @@
 com\tugalsan\tst\tomcat\embedded\utils\TS_TomcatListener.class
-com\tugalsan\tst\tomcat\embedded\servlets\ServletByMapping.class
 com\tugalsan\tst\tomcat\embedded\Main.class
-com\tugalsan\tst\tomcat\embedded\TS_Tomcat.class
-com\tugalsan\tst\tomcat\embedded\utils\TS_TomcatConnector.class
-com\tugalsan\tst\tomcat\embedded\servlets\ServletDestroy.class
-com\tugalsan\tst\tomcat\embedded\utils\TS_TomcatBall.class
+com\tugalsan\tst\tomcat\embedded\servlets\TS_ServletDestroy.class
+com\tugalsan\tst\tomcat\embedded\TS_ServletAbstract.class
+com\tugalsan\tst\tomcat\embedded\servlets\TS_ServletAlive.class
+com\tugalsan\tst\tomcat\embedded\TS_TomcatBall.class
+com\tugalsan\tst\tomcat\embedded\TS_TomcatConnector.class
 com\tugalsan\tst\tomcat\embedded\utils\TS_TomcatBuild.class
 com\tugalsan\tst\tomcat\embedded\utils\TS_TomcatPath.class
-com\tugalsan\tst\tomcat\embedded\servlets\ServletAbstract.class
