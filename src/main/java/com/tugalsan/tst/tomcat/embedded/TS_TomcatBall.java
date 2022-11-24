@@ -5,7 +5,6 @@ import com.tugalsan.api.list.client.TGS_ListUtils;
 import com.tugalsan.api.log.server.TS_Log;
 import com.tugalsan.api.thread.server.TS_ThreadWait;
 import com.tugalsan.api.unsafe.client.TGS_UnSafe;
-import com.tugalsan.tst.tomcat.embedded.TS_ServletAbstract;
 import com.tugalsan.tst.tomcat.embedded.utils.TS_TomcatBuild;
 import java.util.*;
 import java.nio.file.*;
@@ -25,6 +24,7 @@ public record TS_TomcatBall(
         List<TS_TomcatConnector> connectors) {
 
     final private static TS_Log d = TS_Log.of(TS_TomcatBall.class);
+    public static TS_TomcatBall self;
 
     public static TS_TomcatBall of(CharSequence contextName_as_empty_or_slashName, TGS_ExecutableType1<List<TS_ServletAbstract>> servlets, TGS_ExecutableType1<List<TS_TomcatConnector>> connectors) {
         var tomcatBall = TS_TomcatBuild.init(contextName_as_empty_or_slashName);

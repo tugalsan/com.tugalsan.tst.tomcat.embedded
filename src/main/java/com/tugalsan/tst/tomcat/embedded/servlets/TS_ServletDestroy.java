@@ -1,5 +1,6 @@
 package com.tugalsan.tst.tomcat.embedded.servlets;
 
+import com.tugalsan.api.log.server.TS_Log;
 import com.tugalsan.tst.tomcat.embedded.TS_TomcatBall;
 import java.io.*;
 import jakarta.servlet.*;
@@ -13,14 +14,18 @@ import jakarta.servlet.http.*;
 )
 public class TS_ServletDestroy extends HttpServlet {
 
-    public static TS_TomcatBall tomcatBall;
+    final private static TS_Log d = TS_Log.of(TS_ServletDestroy.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.getWriter().println(TS_ServletDestroy.class.getName());
+        resp.flushBuffer();
         var waitSeconds = 5;
-        if (tomcatBall != null) {
-            tomcatBall.destroy(waitSeconds,waitSeconds);
+        if (TS_TomcatBall.self == null) {
+            d.ce("doGet", "tomcatBall == null");
+        } else {
+            TS_TomcatBall.self.destroy(waitSeconds, waitSeconds);
         }
-        System.exit(0);
+//        System.exit(0);
     }
 }
