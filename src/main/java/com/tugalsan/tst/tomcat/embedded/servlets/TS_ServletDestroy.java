@@ -21,10 +21,10 @@ public class TS_ServletDestroy extends HttpServlet {
         resp.getWriter().println(TS_ServletDestroy.class.getName());
         resp.flushBuffer();
         var waitSeconds = 5;
-        if (TS_TomcatBall.self == null) {
+        if (TS_TomcatBall.self.get() == null) {
             d.ce("doGet", "tomcatBall == null");
         } else {
-            TS_TomcatBall.self.destroy(waitSeconds, waitSeconds);
+            TS_TomcatBall.self.get().destroy(waitSeconds, waitSeconds);
         }
 //        System.exit(0);
     }

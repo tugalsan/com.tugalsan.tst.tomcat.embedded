@@ -51,11 +51,12 @@ public class TS_TomcatBuild {
 //        context.getNamingResources().addResource(resource);
 //        context.getServletContext().addListener(DataBaseSchemaInit.class);
         }
-        return TS_TomcatBall.self = new TS_TomcatBall(
+        var tomcatBall = new TS_TomcatBall(
                 project, project_src_main_webapp, project_target_classes,
                 tomcat, context, contextName_as_empty_or_slashName, resources,
                 new ArrayList(), new ArrayList()
         );
+        return tomcatBall;
     }
 
     public static void map(TS_TomcatBall tomcatBall, List<TS_ServletAbstract> servlets) {
