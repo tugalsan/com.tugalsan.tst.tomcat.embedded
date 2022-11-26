@@ -1,4 +1,4 @@
-package com.tugalsan.tst.tomcat.embedded.utils;
+package com.tugalsan.tst.tomcat.embedded.listeners;
 
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.*;
@@ -8,11 +8,15 @@ public class TS_TomcatListener implements ServletContextListener {
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
-        System.out.println("TS_TomcatListener.contextInitialized");
+        System.out.println(TS_TomcatListener.class.getSimpleName()
+                + ".contextInitialized"
+        );
     }
 
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
-        System.out.println("TS_TomcatListener.contextDestroyed");
+        System.out.println(TS_TomcatListener.class.getSimpleName()
+                + ".contextDestroyed"
+        );
     }
 }

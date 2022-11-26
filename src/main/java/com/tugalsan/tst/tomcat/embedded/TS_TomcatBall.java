@@ -5,13 +5,13 @@ import com.tugalsan.api.list.client.TGS_ListUtils;
 import com.tugalsan.api.log.server.TS_Log;
 import com.tugalsan.api.thread.server.TS_ThreadWait;
 import com.tugalsan.api.unsafe.client.TGS_UnSafe;
+import com.tugalsan.tst.tomcat.embedded.servlets.TS_ServletDestroyByMapping;
 import com.tugalsan.tst.tomcat.embedded.utils.TS_TomcatBuild;
 import java.util.*;
 import java.nio.file.*;
 import org.apache.catalina.*;
 import org.apache.catalina.startup.*;
 import java.time.Duration;
-import java.util.concurrent.atomic.AtomicReference;
 
 public record TS_TomcatBall(
         Path project,
@@ -25,21 +25,15 @@ public record TS_TomcatBall(
         List<TS_TomcatConnector> connectors) {
 
     final private static TS_Log d = TS_Log.of(TS_TomcatBall.class);
-    public static AtomicReference<TS_TomcatBall> self = new AtomicReference();
 
     public static TS_TomcatBall of(CharSequence contextName_as_empty_or_slashName, TGS_ExecutableType1<List<TS_ServletAbstract>> servlets, TGS_ExecutableType1<List<TS_TomcatConnector>> connectors) {
         var tomcatBall = TS_TomcatBuild.init(contextName_as_empty_or_slashName);
-        self.set(tomcatBall);
-        if (self.get() == null) {
-            d.ce("of", "ERROR: Cannot set tomcatBall");
-        } else {
-            d.cr("of", "INFO: tomcatBall set successful");
-        }
         List<TS_ServletAbstract> servletList = TGS_ListUtils.of();
         List<TS_TomcatConnector> connectorList = TGS_ListUtils.of();
         servlets.execute(servletList);
         connectors.execute(connectorList);
         TS_TomcatBuild.map(tomcatBall, servletList);
+        TS_TomcatBuild.map(tomcatBall, new TS_ServletDestroyByMapping(tomcatBall));
         TS_TomcatBuild.startAndLock(tomcatBall, connectorList);
         return tomcatBall;
     }

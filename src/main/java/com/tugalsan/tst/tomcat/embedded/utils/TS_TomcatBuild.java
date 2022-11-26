@@ -1,14 +1,11 @@
 package com.tugalsan.tst.tomcat.embedded.utils;
 
-import com.tugalsan.tst.tomcat.embedded.TS_TomcatConnector;
-import com.tugalsan.tst.tomcat.embedded.TS_TomcatBall;
-import com.tugalsan.tst.tomcat.embedded.TS_ServletAbstract;
 import java.util.*;
 import org.apache.catalina.core.*;
 import org.apache.catalina.startup.*;
 import org.apache.catalina.webresources.*;
 import com.tugalsan.api.unsafe.client.*;
-import com.tugalsan.tst.tomcat.embedded.servlets.*;
+import com.tugalsan.tst.tomcat.embedded.*;
 
 public class TS_TomcatBuild {
 
