@@ -24,8 +24,7 @@ public class TS_ServletDestroyByMapping extends TS_ServletAbstract {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.getWriter().println(TS_ServletDestroyByMapping.class.getName());
         resp.flushBuffer();
-        var waitSeconds = 5;
-        tomcatBall.destroy(waitSeconds, waitSeconds);
+        tomcatBall.destroy();
     }
 
 }
