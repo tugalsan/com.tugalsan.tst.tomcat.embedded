@@ -25,12 +25,7 @@ public class TS_ServletDestroyByMapping extends TS_ServletAbstract {
         resp.getWriter().println(TS_ServletDestroyByMapping.class.getName());
         resp.flushBuffer();
         var waitSeconds = 5;
-        if (tomcatBall == null) {
-            d.ce("doGet", "tomcatBall == null");
-        } else {
-            tomcatBall.destroy(waitSeconds, waitSeconds);
-        }
-//        System.exit(0);
+        tomcatBall.destroy(waitSeconds, waitSeconds);
     }
 
 }
